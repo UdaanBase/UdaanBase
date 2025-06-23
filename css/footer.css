@@ -1,0 +1,28 @@
+
+/* This footer include css for footer except index.html */
+
+.footer-bottom {
+    padding: 20px 0;
+    background-color: #191a1b;
+    text-align: center;
+    border-top: 1px solid #292a2b;
+}
+
+.footer-legal {
+    margin-bottom: 10px;
+}
+
+.footer-legal a {
+    margin: 0 10px;
+    color: #eceef0;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: #0d6efd;
+}
+
+.copyright {
+    color: #ebedef;
+    font-size: 0.9rem;
+}

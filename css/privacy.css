@@ -1,0 +1,140 @@
+/* Base Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --border-radius: 8px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Privacy Header */
+.privacy-header {
+    padding: 80px 0 40px;
+    background: linear-gradient(135deg, var(--primary-color), #1a2530);
+    color: white;
+    text-align: center;
+}
+
+.privacy-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.privacy-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Privacy Content */
+.privacy-content {
+    padding: 50px 0;
+}
+
+.privacy-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.privacy-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.privacy-card h2 i {
+    color: var(--secondary-color);
+}
+
+.privacy-card p {
+    margin-bottom: 15px;
+}
+
+.privacy-card ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.privacy-card ul li {
+    margin-bottom: 8px;
+}
+
+.privacy-card a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.privacy-card a:hover {
+    text-decoration: underline;
+}
+
+/* Cookie Button */
+.cookie-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+.cookie-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .privacy-header h1 {
+        font-size: 2rem;
+    }
+    
+    .privacy-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-header {
+        padding: 60px 0 30px;
+    }
+    
+    .privacy-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .privacy-card h2 {
+        font-size: 1.3rem;
+    }
+}

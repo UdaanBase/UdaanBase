@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Cost Estimator | UdaanBase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estimator.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <!-- Header (Same as main site) -->
+    <!-- Header Section -->
+   <header class="header">
+        <div class="container">
+            <div class="top-bar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo-link">
+                        <img src="images/logo.png" alt="UdaanBase Logo" class="logo-img">
+                        <div class="logo-text">
+                            <h1 class="site-title">UdaanBase</h1>
+                            <p class="site-slogan">Strong base limitless foundation</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <!-- <li><a href="videos.html">3D-videos</a></li> -->
+                        <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+
+       <!-- Add this to your HTML (just updating the mobile-nav part) -->
+<div class="mobile-nav-overlay">
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <!-- Mobile Logo Added -->
+            <div class="mobile-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="UdaanBase Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1 class="site-title">UdaanBase</h1>
+                        <p class="site-slogan">Strong base limitless foundation</p>
+                    </div>
+                </a>
+            </div>
+            <button class="mobile-nav-close" aria-label="Close navigation">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" ><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-toggle"><i class="fas fa-money-bill-wave"></i> Our Plans<i class="fas fa-angle-right dropdown-arrow"></i></a>
+                <ul class="submenu"> 
+                    <li><a href="vastu.html"><i class="fas fa-house-user"></i> Vastu Naksha</a></li>
+                    <li><a href="naksha3d.html"><i class="fas fa-boxes"></i> Naksha 3D</a></li>
+                    <li><a href="complete.html"><i class="fas fa-box-open"></i>  Complete Package</a></li>
+                </ul>
+            </li>
+            <li><a href="estimator.html"><i class="fas fa-calculator"></i> Cost Estimator</a></li>
+            <!-- <li><a href="videos.html"><i class="fas fa-video"></i> 3D-videos</a></li> -->
+            <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="faq.html"><i class="fas fa-question-circle"></i> F&Q</a></li>
+            <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms and Conditions</a></li>
+        </ul>
+    </nav>
+</div>
+    </header>
+
+    <main class="estimator-container">
+        <section class="estimator-intro">
+            <div class="container">
+                <h1>Construction Cost Estimator</h1>
+                <p>Get an instant estimate for your dream home construction. Calculate plot area, select your preferred design package, and receive a detailed cost breakdown.</p>
+            </div>
+        </section>
+
+        <section class="estimator-form">
+            <div class="container">
+                <form id="costEstimatorForm">
+               <div class="form-section">
+    <h2><i class="fas fa-ruler-combined"></i> Plot Dimensions</h2>
+    <div class="dimension-group">
+        <div class="input-group">
+            <label for="plotLengthFt">Length (feet)</label>
+            <input type="number" id="plotLengthFt" min="0" required>
+        </div>
+        <div class="input-group">
+            <label for="plotLengthIn">Length (inches)</label>
+            <input type="number" id="plotLengthIn" min="0" max="11" value="0">
+        </div>
+    </div>
+    <div class="dimension-group">
+        <div class="input-group">
+            <label for="plotWidthFt">Width (feet)</label>
+            <input type="number" id="plotWidthFt" min="0" required>
+        </div>
+        <div class="input-group">
+            <label for="plotWidthIn">Width (inches)</label>
+            <input type="number" id="plotWidthIn" min="0" max="11" value="0">
+        </div>
+    </div>
+    <div class="input-group">
+        <label for="plotArea">Total Plot Area (sq.ft)</label>
+        <input type="number" id="plotArea" readonly>
+    </div>
+</div>
+
+                    <div class="form-section">
+                        <h2><i class="fas fa-home"></i> Construction Type</h2>
+                        <div class="radio-group">
+                            <input type="radio" id="residential" name="constructionType" value="residential" checked>
+                            <label for="residential">Residential</label>
+                            
+                            <input type="radio" id="commercial" name="constructionType" value="commercial">
+                            <label for="commercial">Commercial</label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2><i class="fas fa-file-alt"></i> Design Package</h2>
+                        <div class="package-options">
+                            <div class="package-card">
+                                <input type="radio" id="vastuNaksha" name="designPackage" value="vastu" checked>
+                                <label for="vastuNaksha">
+                                    <h3>Vastu Naksha</h3>
+                                    <p>Basic architectural plans with Vastu compliance</p>
+                                    <span class="price">₹2/sq.ft</span>
+                                </label>
+                            </div>
+                            
+                            <div class="package-card">
+                                <input type="radio" id="naksha3d" name="designPackage" value="3d">
+                                <label for="naksha3d">
+                                    <h3>3D Naksha</h3>
+                                    <p>3D visualization along with basic plans</p>
+                                    <span class="price">₹4/sq.ft</span>
+                                </label>
+                            </div>
+                            
+                            <div class="package-card">
+                                <input type="radio" id="completePackage" name="designPackage" value="complete">
+                                <label for="completePackage">
+                                    <h3>Complete Package</h3>
+                                    <p>Detailed drawings, 3D views, and structural plans</p>
+                                    <span class="price">₹5/sq.ft</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2><i class="fas fa-calculator"></i> Estimated Cost</h2>
+                        <div class="results">
+                            <div class="result-item">
+                                <span>Plot Area:</span>
+                                <span id="resultArea">0 sq.ft</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Design Package:</span>
+                                <span id="resultPackage">Vastu Naksha</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Package Rate:</span>
+                                <span id="resultRate">₹15/sq.ft</span>
+                            </div>
+                            <div class="result-item total">
+                                <span>Estimated Cost:</span>
+                                <span id="resultTotal">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="calculateBtn" class="btn calculate">Calculate Estimate</button>
+                        <button type="button" id="whatsappBtn" class="btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="estimator-info">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-ruler"></i>
+                        <h3>Enter Plot Dimensions</h3>
+                        <p>Provide the length and width of your plot in feet to calculate the total area.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-vector-square"></i>
+                        <h3>Select Design Package</h3>
+                        <p>Choose from our Vastu-compliant, 3D visualization, or complete design packages.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Get Instant Estimate</h3>
+                        <p>Our calculator will provide an approximate cost based on your selections.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>Connect With Us</h3>
+                        <p>Send your estimate directly to our WhatsApp for further discussion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+         
+      <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+     <footer>
+     <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="about.html">About</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="faq.html">FAQ</a>
+                    <!-- <a href="privacy.html">Privacy-Policy</a> -->
+                </div>
+                <div class="copyright">
+                    &copy; <span id="current-year"></span> UdaanBase. All Rights Reserved.
+                </div>
+   </footer> 
+
+
+    <script src="js/estimator.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

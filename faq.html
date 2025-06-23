@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - UdaanBase</title>
+    <meta name="description" content="Get answers to common questions about our architectural design services, pricing, and process">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <!-- Header (Same as main site) -->
+    <!-- Header Section -->
+   <header class="header">
+        <div class="container">
+            <div class="top-bar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo-link">
+                        <img src="images/logo.png" alt="UdaanBase Logo" class="logo-img">
+                        <div class="logo-text">
+                            <h1 class="site-title">UdaanBase</h1>
+                            <p class="site-slogan">Strong base limitless foundation</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <!-- <li><a href="videos.html">3D-videos</a></li> -->
+                        <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+
+       <!-- Add this to your HTML (just updating the mobile-nav part) -->
+<div class="mobile-nav-overlay">
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <!-- Mobile Logo Added -->
+            <div class="mobile-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="UdaanBase Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1 class="site-title">UdaanBase</h1>
+                        <p class="site-slogan">Strong base limitless foundation</p>
+                    </div>
+                </a>
+            </div>
+            <button class="mobile-nav-close" aria-label="Close navigation">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" ><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index.html#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-toggle"><i class="fas fa-money-bill-wave"></i> Our Plans<i class="fas fa-angle-right dropdown-arrow"></i></a>
+                <ul class="submenu"> 
+                    <li><a href="vastu.html"><i class="fas fa-house-user"></i> Vastu Naksha</a></li>
+                    <li><a href="naksha3d.html"><i class="fas fa-boxes"></i> Naksha 3D</a></li>
+                    <li><a href="complete.html"><i class="fas fa-box-open"></i>  Complete Package</a></li>
+                </ul>
+            </li>
+            <li><a href="estimator.html"><i class="fas fa-calculator"></i> Cost Estimator</a></li>
+            <!-- <li><a href="videos.html"><i class="fas fa-video"></i> 3D-videos</a></li> -->
+            <li><a href="index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="faq.html"><i class="fas fa-question-circle"></i> F&Q</a></li>
+            <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms and Conditions</a></li>
+        </ul>
+    </nav>
+</div>
+    </header>
+
+    <!-- FAQ Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our design services and process</p>
+        </div>
+    </section>
+
+    <!-- FAQ Main Content -->
+    <main class="faq-container">
+        <div class="container">
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="general">General</button>
+                <button class="category-btn" data-category="pricing">Pricing</button>
+                <button class="category-btn" data-category="process">Process</button>
+            </div>
+
+            <div class="faq-accordion">
+                <!-- General Questions -->
+                <div class="faq-category" data-category="general">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What services do you offer?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We provide comprehensive house design solutions including:</p>
+                            <ul>
+                                <li>2D floor plans with dimensions</li>
+                                <li>Front and side elevation designs</li>
+                                <li>3D models with photorealistic renders</li>
+                                <li>Walkthrough videos (for selected packages)</li>
+                                <li>Structural engineering drawings</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you provide Vastu-compliant plans?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we can create designs following basic Vastu principles upon request. Please mention this requirement when placing your order.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you handle construction work?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Currently, we specialize in design services only. However, we provide detailed structural guidance to assist with construction.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Questions -->
+                <div class="faq-category" data-category="pricing" style="display:none">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What are your pricing options?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our competitive pricing starts at just ₹2/sq.ft:</p>
+                            <ul>
+                                <li><strong>Basic Package (₹2/sq.ft):</strong> 2D floor plan only</li>
+                                <li><strong>Standard Package (₹4/sq.ft):</strong> 2D plan + elevations + basic 3D views</li>
+                                <li><strong>Premium Package (₹5/sq.ft):</strong> Complete set with 3D renders and walkthrough video</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What payment methods do you accept?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We accept all major payment options:</p>
+                            <ul>
+                                <li>UPI (PhonePe, Google Pay, etc.)</li>
+                                <li>Bank transfers</li>
+                                <li>30% advance required to begin work</li>
+                                <li>70% balance payment before final delivery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Questions -->
+                <div class="faq-category" data-category="process" style="display:none">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I place an order?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can contact us through:</p>
+                            <ul>
+                                <li>WhatsApp: +91 7061570522</li>
+                                <li>Phone call</li>
+                                <li>Our website contact form</li>
+                            </ul>
+                            <p>Please provide your plot dimensions and requirements. We'll confirm pricing and timelines.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is your typical turnaround time?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Delivery times vary by project complexity:</p>
+                            <ul>
+                                <li>2D plans: 1-3 business days</li>
+                                <li>3D models: 3-5 business days</li>
+                                <li>Complete packages: 5-7 business days</li>
+                            </ul>
+                            <p>We provide an estimated timeline before starting your project.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I request design modifications?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Our packages include:</p>
+                            <ul>
+                                <li>Minor revisions (dimension adjustments, window/door changes)</li>
+                                <li>Major redesigns may incur additional charges</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What file formats will I receive?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>After final payment, you'll receive:</p>
+                            <ul>
+                                <li>PDF/JPG for 2D plans</li>
+                                <li>MP4 for walkthrough videos</li>
+                                <li>Original AutoCAD files (DWG) upon request</li>
+                            </ul>
+                            <p>Delivered via Google Drive, email, or WhatsApp.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is your cancellation policy?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our policy is fair and transparent:</p>
+                            <ul>
+                                <li>Advance payment is non-refundable if work has begun</li>
+                                <li>Full refund possible if no work has started (case-by-case basis)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="faq-cta">
+        <div class="container">
+            <h2>Still have questions?</h2>
+            <p>Contact us directly for personalized assistance</p>
+            <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+        <!-- Back to Top Button -->
+    <!-- <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button> -->
+
+     <footer>
+     <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="about.html">About</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="faq.html">FAQ</a>
+                    <!-- <a href="privacy.html">Privacy-Policy</a> -->
+                </div>
+                <div class="copyright">
+                    &copy; <span id="current-year"></span> UdaanBase. All Rights Reserved.
+                </div>
+   </footer> 
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>
