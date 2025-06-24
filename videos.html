@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated videos - UdaanBase</title>
+    <meta name="description" content="Professional 3D architectural visualizations with Vastu-compliant floor plans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/videos.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+      <!-- Header (Same as main site) -->
+    <!-- Header Section -->
+   <header class="header">
+        <div class="container">
+            <div class="top-bar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo-link">
+                        <img src="images/logo.png" alt="UdaanBase Logo" class="logo-img">
+                        <div class="logo-text">
+                            <h1 class="site-title">UdaanBase</h1>
+                            <p class="site-slogan">Strong base limitless foundation</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="vastu.html">VastuNaksha</a></li>
+                        <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+
+       <!-- Add this to your HTML (just updating the mobile-nav part) -->
+<div class="mobile-nav-overlay">
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <!-- Mobile Logo Added -->
+            <div class="mobile-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="UdaanBase Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1 class="site-title">UdaanBase</h1>
+                        <p class="site-slogan">Strong base limitless foundation</p>
+                    </div>
+                </a>
+            </div>
+            <button class="mobile-nav-close" aria-label="Close navigation">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" ><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index.html#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-toggle"><i class="fas fa-money-bill-wave"></i> Our Plans<i class="fas fa-angle-right dropdown-arrow"></i></a>
+                <ul class="submenu"> 
+                    <li><a href="vastu.html"><i class="fas fa-house-user"></i> Vastu Naksha</a></li>
+                    <li><a href="naksha3d.html"><i class="fas fa-boxes"></i> Naksha 3D</a></li>
+                    <li><a href="complete.html"><i class="fas fa-box-open"></i>  Complete Package</a></li>
+                </ul>
+            </li>
+            <li><a href="estimator.html"><i class="fas fa-calculator"></i> Cost Estimator</a></li>
+            <li><a href="videos.html"><i class="fas fa-video"></i> 3D-videos</a></li>
+            <li><a href="index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="faq.html"><i class="fas fa-question-circle"></i> F&Q</a></li>
+            <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms and Conditions</a></li>
+        </ul>
+    </nav>
+   </div>
+  </header>
+
+    <section class="video-intro">
+  <div class="intro-content">
+    <h2>Experience Your Dream Home in 3D</h2>
+    <p>Our professional animated walkthroughs bring architectural designs to life, letting you explore every corner before construction begins.</p>
+    <div class="features-grid">
+      <div class="feature">
+        <i class="fas fa-video"></i>
+        <h3>HD Quality</h3>
+        <p>Crystal clear 1080p resolution</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-arrows-alt"></i>
+        <h3>360° Views</h3>
+        <p>Explore from every angle</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Lighting Effects</h3>
+        <p>Realistic day/night transitions</p>
+      </div>
+    </div>
+  </div>
+  <div class="intro-video">
+    <video autoplay muted loop>
+      <source src="Videos/4.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+ 
+<main>
+  <h1>Animated 3D Videos</h1>
+
+  <div class="video-gallery">
+    <!-- Replace these with your actual video files -->
+    <div class="video-thumb" onclick="openLightbox('Videos/1.mp4')">
+      <video src="Videos/1.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('Videos/2.mp4')">
+      <video src="Videos/2.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('Videos/3.mp4')">
+      <video src="Videos/3.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('Videos/4.mp4')">
+      <video src="Videos/4.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('Videos/5.mp4')">
+      <video src="Videos/5.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+     <div class="video-thumb" onclick="openLightbox('Videos/6.mp4')">
+      <video src="Videos/6.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('Videos/7.mp4')">
+      <video src="Videos/7.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('Videos/8.mp4')">
+      <video src="Videos/8.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('Videos/9.mp4')">
+      <video src="Videos/9.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+    <div class="video-thumb" onclick="openLightbox('Videos/10.mp4')">
+      <video src="Videos/10.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+     <div class="video-thumb" onclick="openLightbox('Videos/11.mp4')">
+      <video src="Videos/11.mp4" muted></video>
+       <div class="play-icon">&#9658;</div>
+    </div>
+  </div>
+</main>
+  
+  <!-- Video Lightbox -->
+<div id="video-lightbox">
+  <!-- ✕ close -->
+  <span class="close" onclick="closeLightbox()">&times;</span>
+
+  <!-- ◀ nav -->
+  <button class="video-nav video-prev" onclick="prevVideo()" aria-label="Previous video">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+
+  <!-- video -->
+  <video id="lightbox-video" controls autoplay></video>
+
+  <!-- ▶ nav -->
+  <button class="video-nav video-next" onclick="nextVideo()" aria-label="Next video">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+</div>
+
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+     <footer>
+     <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="about.html">About</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="faq.html">FAQ</a>
+                    <!-- <a href="privacy.html">Privacy-Policy</a> -->
+                </div>
+                <div class="copyright">
+                    &copy; <span id="current-year"></span> UdaanBase. All Rights Reserved.
+                </div>
+   </footer> 
+
+  <script src="js/videos.js"></script>
+  <script src="js/script.js"></script>
+  </body>
+  </html>

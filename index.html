@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UdaanBase - Architecture and Design</title>
+    <meta name="description" content="Strong base limitless foundation - Professional architecture and design services">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+   <header class="header">
+        <div class="container">
+            <div class="top-bar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo-link">
+                        <img src="images/logo.png" alt="UdaanBase Logo" class="logo-img">
+                        <div class="logo-text">
+                            <h1 class="site-title">UdaanBase</h1>
+                            <p class="site-slogan">Strong base limitless foundation</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="videos.html">3D-videos</a></li>
+                        <li><a href="faq.html">F&Q</a></li>
+                        <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+
+       <!--(the mobile-nav part) -->
+<div class="mobile-nav-overlay">
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <!-- Mobile Logo Added -->
+            <div class="mobile-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="UdaanBase Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1 class="site-title">UdaanBase</h1>
+                        <p class="site-slogan">Strong base limitless foundation</p>
+                    </div>
+                </a>
+            </div>
+            <button class="mobile-nav-close" aria-label="Close navigation">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+          <ul class="mobile-nav-list">
+            <li><a href="index.html" ><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)" class="submenu-toggle"><i class="fas fa-money-bill-wave"></i> Our Plans<i class="fas fa-angle-right dropdown-arrow"></i></a>
+                <ul class="submenu"> 
+                    <li><a href="vastu.html"><i class="fas fa-house-user"></i> Vastu Naksha</a></li>
+                    <li><a href="naksha3d.html"><i class="fas fa-boxes"></i> Naksha 3D</a></li>
+                    <li><a href="complete.html"><i class="fas fa-box-open"></i>  Complete Package</a></li>
+                </ul>
+            </li>
+            <li><a href="estimator.html"><i class="fas fa-calculator"></i> Cost Estimator</a></li>
+            <!-- <li><a href="videos.html"><i class="fas fa-video"></i> 3D-videos</a></li> -->
+            <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="faq.html"><i class="fas fa-question-circle"></i> F&Q</a></li>
+            <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms and Conditions</a></li>
+           </ul>
+    </nav>
+        </div>
+  </header>
+    <!-- Hero Section -->
+
+    <!-- =================================================
+     HERO SECTION (UdaanBase) — revision 4
+     ------------------------------------------------- -->
+<section id="hero">
+  <div id="vanta-bg"></div>
+  <div class="hero-inner">
+    <h1 id="hero-text"></h1>
+    <a href="#pricing" class="hero-btn">Explore Projects</a>
+  </div>
+</section>
+
+<!-- =================================================
+     LIBRARIES (no async/defer; keep the order!)
+     ------------------------------------------------- -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.4/TextPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+
+<style>
+  /* --------------------------------------------------
+     LAYOUT & TYPOGRAPHY
+     -------------------------------------------------- */
+  #hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: #000;               /* fallback colour */
+    padding-inline: 1rem;          /* side breathing room */
+  }
+  #vanta-bg { position: absolute; inset: 0; z-index: 0; }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;          /* gap between text & button */
+  }
+
+  /* ---------- headline ---------- */
+  #hero-text {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    background-image: linear-gradient(45deg,#ff6b6b,#f8d800,#39ff14,#2176ff);
+    background-size: 800%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 8s linear infinite;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .35);
+  }
+  /* keep the headline on ONE line on larger screens */
+  @media (min-width: 768px) { #hero-text { white-space: nowrap; } }
+
+  @keyframes gradient-move { 0%{background-position:0%} 50%{background-position:100%} 100%{background-position:0%} }
+
+  /* --------------------------------------------------
+     CTA BUTTON (.hero-btn) – multicolour background & border
+     -------------------------------------------------- */
+  .hero-btn {
+    position: relative;
+    padding: 0.75rem 2.5rem;                 /* desktop size */
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid transparent;          /* needed for mask trick */
+    border-radius: 50px;
+    background: #000;                       /* inner fill so text stays readable */
+    overflow: hidden;
+    z-index: 0;
+    transition: transform .3s ease;
+  }
+  /* Animated gradient border – VS Code may underline -webkit-mask
+     (vendor‑specific) with a yellow squiggle. That’s normal & safe. */
+  .hero-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;                            /* border thickness */
+    border-radius: inherit;
+    background: linear-gradient(45deg,#ff6b6b,#f8d800,#39ff14,#2176ff);
+    background-size: 800%;
+    animation: gradient-move 8s linear infinite;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;         /* show only the border */
+    z-index: -1;
+  }
+  /* multicolour button interior (subtle tint) */
+  .hero-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(45deg,#ff6b6b,#f8d800,#39ff14,#2176ff);
+    background-size: 800%;
+    animation: gradient-move 8s linear infinite;
+    opacity: .15;
+    z-index: -2;
+  }
+  .hero-btn:hover { transform: scale(1.05) translateY(-2px); }
+
+  /* SMALL SCREENS: shrink padding & font, no full‑width */
+  @media (max-width: 480px) {
+    .hero-btn {
+      width: auto;              /* natural width */
+      padding: 0.55rem 1.6rem;  /* smaller touch target */
+      font-size: 1rem;          /* keep legible */
+    }
+  }
+</style>
+
+<script>
+  /* =================================================
+     HERO SECTION JS
+     ------------------------------------------------- */
+  window.addEventListener('load', () => {
+    /* ===== TEXT CAROUSEL ===== */
+    if (window.gsap && window.TextPlugin) {
+      gsap.registerPlugin(TextPlugin);
+      const messages = [
+        'Welcome to UdaanBase',
+        'Plans starting at just ₹2/sq.ft',
+        'Book your plans now'
+      ];
+      const heroText = document.getElementById('hero-text');
+      let current = 0;
+
+      function showNext() {
+        gsap.to(heroText, {
+          duration: 0.5,
+          opacity: 0,
+          onComplete: () => {
+            gsap.to(heroText, {
+              duration: 1.0,
+              opacity: 1,
+              text: { value: messages[current], delimiter: '' },
+              ease: 'power2.out'
+            });
+            current = (current + 1) % messages.length; // cycles every 4 sec
+          }
+        });
+      }
+      showNext();
+      setInterval(showNext, 4000); // <— TEXT SWITCH INTERVAL (4 000 ms)
+    } else {
+      console.error('[UdaanBase-Hero] GSAP failed to load – headline stays static.');
+      document.getElementById('hero-text').textContent = 'Welcome to UdaanBase';
+    }
+
+    /* ===== 3-D BACKGROUND ===== */
+    if (window.THREE && window.VANTA && window.VANTA.NET) {
+      VANTA.NET({
+        el: '#vanta-bg',
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        color: 0xff7b00,
+        backgroundColor: 0x000000,
+        points: 12.0,
+        maxDistance: 20.0,
+        spacing: 18.0
+      });
+    } else {
+      console.warn('[UdaanBase-Hero] Vanta background skipped (missing THREE / Vanta).');
+    }
+  });
+</script>
+
+    
+
+    <!-- <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>WELCOME TO UDAANBASE</h1>
+                <hr><hr><br>
+                <h1>Professional Architecture Services</h1>
+                <p>Creating designs that stand the test of time with strong foundations</p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="btn btn-primary">Our Pricing</a>
+                    <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Professional solutions for your architectural needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Vastu Plans & Designs</h3>
+                    <p>Harmonious designs following Vastu principles for positive energy flow in your living spaces.</p>
+                    <a href="#VastuNaksha" class="btnn">Click Now</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                    <i class="fas fa-cube"></i>
+                    </div>
+                    <h3> Naksha & 3D Designs</h3>
+                    <p>Realistic 3D visualizations that bring your architectural concepts to life before construction.</p>
+                    <a href="#mynaksha" class="btnn">Click Now</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Structural Drawings</h3>
+                    <p>Precise technical drawings and specifications for construction teams to build with confidence.</p>
+                    <a href="#complete-package" class="btnn">Click Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Plans & Pricing</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Affordable solutions for every need</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div id="VastuNaksha" class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Vastu Naksha</h3>
+                        <div class="price">₹2<span>/sq ft</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Vastu-compliant floor plans</li>
+                        <li>Basic elevation designs</li>
+                        <li>2 rounds of revisions</li>
+                        <li>PDF & JPEG deliverables</li>
+                    </ul>
+                    <a href="vastu.html" class="btn">Get Started</a>
+                </div>
+                
+                <div id="mynaksha" class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3>Naksha + 3D Designs</h3>
+                        <div class="price">₹4<span>/sq ft</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Everything in Vastu Naksha</li>
+                        <li>3D exterior visualization</li>
+                        <li>3 interior room views</li>
+                        <li>3 rounds of revisions</li>
+                        <li>High-res image outputs</li>
+                    </ul>
+                    <a href="naksha3d.html" class="btn">Get Started</a>
+                </div>
+                
+                <div id="complete-package" class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Complete Drawings Package</h3>
+                        <div class="price">₹5<span>/sq ft</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Everything in Naksha + 3D</li>
+                        <li>Detailed structural drawings</li>
+                        <li>Electrical & plumbing layouts</li>
+                        <li>Material specifications</li>
+                        <li>5 rounds of revisions</li>
+                        <li>AutoCAD files included</li>
+                    </ul>
+                    <a href="complete.html" class="btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title-cont"> Contact Us </h1>
+                <div class="section-divider"></div>
+                <p class="section-subtitle-cont">Get in touch for your project consultation</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                      <div class="contact-item">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Cost Estimator</h3>
+                        <p>Calculate your Estimated cost for your plot now</p>
+                         <a href="estimator.html" target="_blank">
+                          <button class="button">Click Now</button>
+                          </a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Call Us</h3>
+                        <p>+91 7061570522</p>
+                          <a href="https://wa.me/+917061570522" target="_blank">
+                           <button class="button">Message on WhatsApp</button> 
+                          </a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>udaanbase@gmail.com</p>
+                         <a href="mailto:udaanbase@gmail.com" target="_blank">
+                          <button class="button">Contact on Email</button>
+                          </a>
+                    </div>
+                      <!-- <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Our Office</h3>
+                        <p>123 Design Street, Architecture City, IN 123456</p>
+                    </div> -->
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <!-- <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div> -->
+                    <div class="form-group">
+                       <input type="tel" placeholder="+91XXXXXXXXXX" pattern="^\+91\d{10}$" required>
+                     </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="UdaanBase Logo">
+                        <h3>UdaanBase</h3>
+                    </div>
+                    <p class="footer-about">Strong base limitless foundation. Professional architecture and design services to bring your vision to life.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/16WyqxShjq/" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/udaanbase?igsh=NDNtZ2lvNnVhMzQx" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@civilianhimmu?si=a7uWvZ8UmZFmchwt" aria-label="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://in.linkedin.com/in/udaanbase-company-246924369?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <!-- <li><a href="videos.html">3D-videos</a></li> -->
+                        <li><a href="estimator.html">Cost Estimator</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-col"> 
+                    <h4>Our pricing</h4>
+                    <ul class="footer-links">                         
+                        <li><a href="#VastuNaksha">Vastu Plans</a></li>
+                        <li><a href="#mynaksha">3D Designs</a></li>
+                        <!-- <li><a href="#pricing">Structural Drawings</a></li> -->
+                        <li><a href="#complete-package">Complete Packages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Business Hours</h4>
+                    <ul class="business-hours">
+                        <li>Monday - Friday: 9am to 6pm</li>
+                        <li>Saturday: 10am to 4pm</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="about.html">About</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="faq.html">FAQ</a>
+                    <!-- <a href="privacy.html">Privacy-Policy</a> -->
+                </div>
+                <div class="copyright">
+                    &copy; <span id="current-year"></span> UdaanBase. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
