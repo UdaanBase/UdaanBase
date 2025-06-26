@@ -325,11 +325,11 @@
 
 @media (max-width: 576px) {
     .vastu-hero h1 {
-        font-size: 3rem;
+        font-size: 1.4rem;
     }
     
     .vastu-hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .intro-content h2 {

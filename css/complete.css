@@ -381,11 +381,11 @@
 
 @media (max-width: 576px) {
     .complete-hero h1 {
-        font-size: 1.9rem;
+        font-size: 1.2rem;
     }
     
     .complete-hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .gallery-grid {
