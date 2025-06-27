@@ -89,6 +89,7 @@
     <!-- =================================================
      HERO SECTION (UdaanBase) — revision 4
      ------------------------------------------------- -->
+
 <section id="hero">
   <div id="vanta-bg"></div>
   <div class="hero-inner">
@@ -219,7 +220,7 @@
       const messages = [
         'Welcome to UdaanBase',
         'Plans starting at just ₹2/sq.ft',
-        'Book your plans now'
+        'start your Dream project now'
       ];
       const heroText = document.getElementById('hero-text');
       let current = 0;
@@ -235,12 +236,12 @@
               text: { value: messages[current], delimiter: '' },
               ease: 'power2.out'
             });
-            current = (current + 1) % messages.length; // cycles every 4 sec
+            current = (current + 1) % messages.length; // cycles every 3 sec
           }
         });
       }
       showNext();
-      setInterval(showNext, 4000); // <— TEXT SWITCH INTERVAL (4 000 ms)
+      setInterval(showNext, 3000); // <— TEXT SWITCH INTERVAL CHANGED TO 3 SECONDS (3000 ms)
     } else {
       console.error('[UdaanBase-Hero] GSAP failed to load – headline stays static.');
       document.getElementById('hero-text').textContent = 'Welcome to UdaanBase';
@@ -266,12 +267,9 @@
 </script>
 
 
-
     <!-- <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1>WELCOME TO UDAANBASE</h1>
-                <hr><hr><br>
                 <h1>Professional Architecture Services</h1>
                 <p>Creating designs that stand the test of time with strong foundations</p>
                 <div class="hero-buttons">
